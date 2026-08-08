@@ -60,9 +60,9 @@ To obtain a larger dataset:
 2. Follow the RAVEN repo instructions to generate problem files.
 3. Store the generated `.npz` files in:
 
-   ```text
+```text
 data/raven_test/distribute_nine
-   ```
+```
 
 
 ## Usage

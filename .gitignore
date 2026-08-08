@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+# Virtual environments
+.venv/
+env/
+venv/
+# VS Code
+.vscode/
+# PyCharm
+.idea/
+# Data and model checkpoints
+RAVEN/
+data/raven_test/distribute_nine/
+# Ignore OS files
+.DS_Store
+Thumbs.db
+# Logs
+*.log
+# Python bytecode
+*.pyc
+# Temporary files
+*.tmp
+*.swp
+*~

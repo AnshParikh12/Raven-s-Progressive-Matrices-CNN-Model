@@ -48,7 +48,7 @@ The dataset is generated using the RAVEN dataset project:
 ## Local dataset
 
 This repository does not bundle the full RAVEN dataset.
-The current local dataset contains `100` generated Raven problem files in:
+The current local dataset contains `10000` generated Raven problem files in:
 
 ```text
 data/raven_test/distribute_nine

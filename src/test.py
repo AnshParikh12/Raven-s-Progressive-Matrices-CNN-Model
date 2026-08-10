@@ -1,17 +1,18 @@
 import torch
 from torch.utils.data import DataLoader, random_split
+from tqdm import tqdm
 
 from dataset import RavenDataset
 from model import CNNEncoder, RavenReasoner
 
 DATA_PATH = r".\data\raven_test\distribute_nine"
-CHECKPOINT_PATH = r".\checkpoints\best_model.pth"
+CHECKPOINT_PATH = r".\checkpoints\best_model_10k.pth"
 BATCH_SIZE = 4
 
 dataset = RavenDataset(DATA_PATH)
 
-train_size = 80
-val_size = 20
+train_size = 8000
+val_size = 2000
 generator = torch.Generator().manual_seed(42)
 
 train_dataset, val_dataset = random_split(
@@ -59,7 +60,10 @@ correct = 0
 total = 0
 
 with torch.no_grad():
-    for context, choices, target in val_loader:
+    for context, choices, target in tqdm(
+        val_loader,
+        desc="Testing"
+    ):
         batch_size = context.shape[0]
 
         context = context.view(

@@ -78,3 +78,8 @@ If you need package-style execution with `src/` imports:
 ```powershell
 .\.venv\Scripts\python.exe -m src.tests.test_dataloader
 ```
+
+
+## Result
+
+Current best accuracy received is 28.75%. Simple CNN is not able to achieve a better result. A future experiment could be to use ResNet or other pretrained model that has already learned basic features like lines, shapes, points, etc. and then train it to learn patterns and transformations.
